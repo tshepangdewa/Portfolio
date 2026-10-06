@@ -88,18 +88,13 @@ ul {
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    font-size: 1.05rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    justify-content: center;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 34px;
 }
 
@@ -851,6 +846,7 @@ ul {
 
     .navbar {
         min-height: 72px;
+        justify-content: flex-end;
     }
 
     .menu-toggle {
