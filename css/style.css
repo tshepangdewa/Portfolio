@@ -915,30 +915,57 @@ ul {
     }
 
 
-    /* Projects */
+/* Projects */
 
-    .projects-list {
-        gap: 75px;
-    }
+.projects-list {
+    gap: 80px;
+}
 
-    .project-card,
-    .project-card:nth-child(even) {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
+.project-card,
+.project-card:nth-child(even) {
+    grid-template-columns: 1fr;
+    gap: 35px;
+}
 
-    .project-card:nth-child(even) .project-image,
-    .project-card:nth-child(even) .project-content {
-        order: initial;
-    }
+.project-card:nth-child(even) .project-image,
+.project-card:nth-child(even) .project-content {
+    order: initial;
+}
 
+.project-content {
+    max-width: none;
+}
 
-    /* Contact */
+.project-content h3 {
+    font-size: 1.45rem;
+}
 
-    .contact-form {
-        padding: 25px;
-    }
+.project-description {
+    font-size: 0.9rem;
+}
 
+.project-links {
+    flex-wrap: wrap;
+}
+
+   /* Contact */
+
+.contact-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+}
+
+.contact-intro {
+    padding-top: 0;
+}
+
+.contact-intro h3 {
+    font-size: 1.7rem;
+}
+
+.contact-form {
+    padding: 25px;
+}
 
     /* Footer */
 
