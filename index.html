@@ -1,106 +1,204 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Your Name | Portfolio</title>
+```
+<title>Your Name | Portfolio</title>
 
-    <meta
-        name="description"
-        content="Personal portfolio website showcasing my work, skills, and experience."
-    >
+<meta
+    name="description"
+    content="Personal portfolio website showcasing my work, skills, and experience."
+>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+<link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+>
 
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
+```
+
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header class="site-header">
+```
+<!-- Header -->
+<header class="site-header">
+    <div class="container">
+
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                Your Name
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- Main -->
+<main>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+
         <div class="container">
 
-            <nav class="navbar">
+            <div class="hero-content">
 
-                <a href="#home" class="logo">
+                <p class="hero-intro">
+                    Hello, I'm
+                </p>
+
+                <h1>
                     Your Name
-                </a>
+                </h1>
 
-                <button
-                    class="menu-toggle"
-                    type="button"
-                    aria-label="Toggle navigation"
-                    aria-expanded="false"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <p class="hero-description">
+                    I build thoughtful digital experiences and
+                    practical solutions through technology.
+                </p>
 
-                <ul class="nav-links">
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
+                <div class="hero-actions">
 
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
+                    <a href="#projects" class="btn">
+                        View Projects
+                    </a>
 
-                    <li>
-                        <a href="#projects">Projects</a>
-                    </li>
+                    <a href="#contact" class="text-link">
+                        Get In Touch
+                    </a>
 
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
+                </div>
 
-            </nav>
+            </div>
 
         </div>
-    </header>
+
+    </section>
 
 
-    <!-- Main -->
-    <main>
+    <!-- About -->
+    <section id="about" class="about section">
 
-        <!-- Hero -->
-        <section id="home" class="hero">
+        <div class="container">
 
-            <div class="container">
+            <div class="section-heading">
 
-                <div class="hero-content">
+                <p class="section-label">
+                    About Me
+                </p>
 
-                    <p class="hero-intro">
-                        Hello, I'm
+                <h2>
+                    A little about me
+                </h2>
+
+                <p>
+                    I enjoy turning ideas and problems into practical,
+                    useful digital solutions.
+                </p>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <!-- About Text -->
+                <div class="about-text">
+
+                    <h3>
+                        Who I am
+                    </h3>
+
+                    <p>
+                        I'm a technology-focused professional interested
+                        in building useful digital products and learning
+                        how technology can solve real-world problems.
                     </p>
 
-                    <h1>
-                        Your Name
-                    </h1>
-
-                    <p class="hero-description">
-                        I build thoughtful digital experiences and
-                        practical solutions through technology.
+                    <p>
+                        My interests span web development, software,
+                        automation, research, and digital tools. I enjoy
+                        learning by building projects and improving them
+                        through practical experience.
                     </p>
 
-                    <div class="hero-actions">
+                    <p>
+                        I'm always looking for opportunities to grow,
+                        collaborate, and work on projects where I can
+                        create something useful.
+                    </p>
 
-                        <a href="#projects" class="btn">
-                            View Projects
-                        </a>
+                    <a href="#contact" class="about-link">
+                        Let's talk
+                    </a>
 
-                        <a href="#contact" class="text-link">
-                            Get In Touch
-                        </a>
+                </div>
+
+
+                <!-- Skills -->
+                <div class="skills">
+
+                    <h3>
+                        My Skills
+                    </h3>
+
+                    <p class="skills-introduction">
+                        Some of the technologies and areas I work with.
+                    </p>
+
+                    <div class="skills-list">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Responsive Design</span>
+                        <span>Web Development</span>
+                        <span>Research</span>
+                        <span>Workflow Automation</span>
+                        <span>Virtual Assistance</span>
+                        <span>Microsoft 365</span>
+                        <span>Google Workspace</span>
 
                     </div>
 
@@ -108,463 +206,424 @@
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- About -->
-        <section id="about" class="about section">
+    <!-- Projects -->
+    <section id="projects" class="projects section">
 
-            <div class="container">
+        <div class="container">
 
-                <div class="section-heading">
+            <div class="section-heading">
 
-                    <p class="section-label">
-                        About Me
-                    </p>
+                <p class="section-label">
+                    Projects
+                </p>
 
-                    <h2>
-                        A little about me
-                    </h2>
+                <h2>
+                    Things I've built
+                </h2>
 
-                    <p>
-                        I enjoy turning ideas and problems into practical,
-                        useful digital solutions.
-                    </p>
+                <p>
+                    A selection of projects that demonstrate my
+                    skills, creativity, and approach to solving problems.
+                </p>
 
-                </div>
+            </div>
 
 
-                <div class="about-content">
+            <div class="projects-list">
 
-                    <!-- About Text -->
-                    <div class="about-text">
+                <!-- Project 01 -->
+                <article class="project-card">
 
-                        <h3>
-                            Who I am
-                        </h3>
+                    <div class="project-image">
 
-                        <p>
-                            I'm a technology-focused professional interested
-                            in building useful digital products and learning
-                            how technology can solve real-world problems.
-                        </p>
-
-                        <p>
-                            My interests span web development, software,
-                            automation, research, and digital tools. I enjoy
-                            learning by building projects and improving them
-                            through practical experience.
-                        </p>
-
-                        <p>
-                            I'm always looking for opportunities to grow,
-                            collaborate, and work on projects where I can
-                            create something useful.
-                        </p>
-
-                        <a href="#contact" class="about-link">
-                            Let's talk
-                        </a>
+                        <img
+                            src="images/project-01.png"
+                            alt="Screenshot of Project 01"
+                        >
 
                     </div>
 
 
-                    <!-- Skills -->
-                    <div class="skills">
+                    <div class="project-content">
 
-                        <h3>
-                            My Skills
-                        </h3>
-
-                        <p class="skills-introduction">
-                            Some of the technologies and areas I work with.
+                        <p class="project-number">
+                            01
                         </p>
 
-                        <div class="skills-list">
+                        <h3>
+                            Project Name
+                        </h3>
+
+                        <p class="project-description">
+                            A short explanation of what this project does,
+                            the problem it solves, and why it was built.
+                        </p>
+
+                        <div class="project-tech">
 
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
-                            <span>Git</span>
-                            <span>GitHub</span>
-                            <span>Responsive Design</span>
-                            <span>Web Development</span>
-                            <span>Research</span>
-                            <span>Workflow Automation</span>
-                            <span>Virtual Assistance</span>
-                            <span>Microsoft 365</span>
-                            <span>Google Workspace</span>
+
+                        </div>
+
+                        <div class="project-links">
+
+                            <!-- Replace with live project URL -->
+                            <a
+                                href="https://example.com/project-01"
+                                class="btn"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View Project
+                            </a>
+
+                            <!-- Replace with GitHub/source code URL -->
+                            <a
+                                href="https://github.com/yourusername/project-01"
+                                class="project-source"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Source Code
+                            </a>
 
                         </div>
 
                     </div>
 
-                </div>
+                </article>
+
+
+                <!-- Project 02 -->
+                <article class="project-card">
+
+                    <div class="project-image">
+
+                        <img
+                            src="images/project-02.png"
+                            alt="Screenshot of Project 02"
+                        >
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <p class="project-number">
+                            02
+                        </p>
+
+                        <h3>
+                            Project Name
+                        </h3>
+
+                        <p class="project-description">
+                            A short explanation of what this project does,
+                            the problem it solves, and why it was built.
+                        </p>
+
+                        <div class="project-tech">
+
+                            <span>JavaScript</span>
+                            <span>API</span>
+                            <span>CSS</span>
+
+                        </div>
+
+                        <div class="project-links">
+
+                            <!-- Replace with live project URL -->
+                            <a
+                                href="https://example.com/project-02"
+                                class="btn"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View Project
+                            </a>
+
+                            <!-- Replace with GitHub/source code URL -->
+                            <a
+                                href="https://github.com/yourusername/project-02"
+                                class="project-source"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Source Code
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Project 03 -->
+                <article class="project-card">
+
+                    <div class="project-image">
+
+                        <img
+                            src="images/project-03.png"
+                            alt="Screenshot of Project 03"
+                        >
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <p class="project-number">
+                            03
+                        </p>
+
+                        <h3>
+                            Project Name
+                        </h3>
+
+                        <p class="project-description">
+                            A short explanation of what this project does,
+                            the problem it solves, and why it was built.
+                        </p>
+
+                        <div class="project-tech">
+
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>Git</span>
+
+                        </div>
+
+                        <div class="project-links">
+
+                            <!-- Replace with live project URL -->
+                            <a
+                                href="https://example.com/project-03"
+                                class="btn"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View Project
+                            </a>
+
+                            <!-- Replace with GitHub/source code URL -->
+                            <a
+                                href="https://github.com/yourusername/project-03"
+                                class="project-source"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Source Code
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
 
             </div>
 
-        </section>
-
-
-       <!-- Projects -->
-<section id="projects" class="projects section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p class="section-label">
-                Projects
-            </p>
-
-            <h2>
-                Things I've built
-            </h2>
-
-            <p>
-                A selection of projects that demonstrate my
-                skills, creativity, and approach to solving problems.
-            </p>
-
         </div>
 
+    </section>
 
-        <div class="projects-list">
 
-            <!-- Project 01 -->
-            <article class="project-card">
-
-                <div class="project-image">
-
-                    <div class="project-placeholder">
-                        <span>Project 01</span>
-                    </div>
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <p class="project-number">
-                        01
-                    </p>
-
-                    <h3>
-                        Project Name
-                    </h3>
-
-                    <p class="project-description">
-                        A short explanation of what this project does,
-                        the problem it solves, and why it was built.
-                    </p>
-
-                    <div class="project-tech">
-
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-
-                    </div>
-
-                    <div class="project-links">
-
-                        <a href="#" class="btn">
-                            View Project
-                        </a>
-
-                        <a href="#" class="project-source">
-                            Source Code
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- Project 02 -->
-            <article class="project-card">
-
-                <div class="project-image">
-
-                    <div class="project-placeholder">
-                        <span>Project 02</span>
-                    </div>
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <p class="project-number">
-                        02
-                    </p>
-
-                    <h3>
-                        Project Name
-                    </h3>
-
-                    <p class="project-description">
-                        A short explanation of what this project does,
-                        the problem it solves, and why it was built.
-                    </p>
-
-                    <div class="project-tech">
-
-                        <span>JavaScript</span>
-                        <span>API</span>
-                        <span>CSS</span>
-
-                    </div>
-
-                    <div class="project-links">
-
-                        <a href="#" class="btn">
-                            View Project
-                        </a>
-
-                        <a href="#" class="project-source">
-                            Source Code
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- Project 03 -->
-            <article class="project-card">
-
-                <div class="project-image">
-
-                    <div class="project-placeholder">
-                        <span>Project 03</span>
-                    </div>
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <p class="project-number">
-                        03
-                    </p>
-
-                    <h3>
-                        Project Name
-                    </h3>
-
-                    <p class="project-description">
-                        A short explanation of what this project does,
-                        the problem it solves, and why it was built.
-                    </p>
-
-                    <div class="project-tech">
-
-                        <span>Python</span>
-                        <span>JavaScript</span>
-                        <span>Git</span>
-
-                    </div>
-
-                    <div class="project-links">
-
-                        <a href="#" class="btn">
-                            View Project
-                        </a>
-
-                        <a href="#" class="project-source">
-                            Source Code
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- Contact -->
-<section id="contact" class="contact section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p class="section-label">
-                Contact
-            </p>
-
-            <h2>
-                Let's work together
-            </h2>
-
-            <p>
-                Have a project, opportunity, or question?
-                I'd be happy to hear from you.
-            </p>
-
-        </div>
-
-
-        <div class="contact-layout">
-
-            <div class="contact-intro">
-
-                <p class="contact-eyebrow">
-                    Get in touch
-                </p>
-
-                <h3>
-                    Have something in mind?
-                </h3>
-
-                <p>
-                    Whether it's a project, collaboration, freelance
-                    opportunity, or simply a conversation about technology,
-                    feel free to reach out.
-                </p>
-
-                <a href="mailto:your@email.com" class="contact-email">
-                    your@email.com
-                </a>
-
-            </div>
-
-
-            <form class="contact-form">
-
-                <div class="form-group">
-
-                    <label for="name">
-                        Name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Your name"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="email">
-                        Email
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Your email"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="message">
-                        Message
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="6"
-                        placeholder="Tell me about your project..."
-                        required
-                    ></textarea>
-
-                </div>
-
-
-                <button type="submit" class="btn">
-                    Send Message
-                </button>
-
-            </form>
-
-        </div>
-
-    </div>
-
-</section>
-
-    </main>
-
-
-    <!-- Footer -->
-    <footer class="site-footer">
+    <!-- Contact -->
+    <section id="contact" class="contact section">
 
         <div class="container">
 
-            <div class="footer-content">
+            <div class="section-heading">
 
-                <div>
+                <p class="section-label">
+                    Contact
+                </p>
 
-                    <h3>
-                        Your Name
-                    </h3>
+                <h2>
+                    Let's work together
+                </h2>
 
-                    <p>
-                        Building useful digital experiences.
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <p>
-                        Social
-                    </p>
-
-                    <div class="social-links">
-
-                        <a href="#" aria-label="GitHub">
-                            GitHub
-                        </a>
-
-                        <a href="#" aria-label="LinkedIn">
-                            LinkedIn
-                        </a>
-
-                    </div>
-
-                </div>
+                <p>
+                    Have a project, opportunity, or question?
+                    I'd be happy to hear from you.
+                </p>
 
             </div>
 
 
-            <div class="footer-bottom">
+            <div class="contact-layout">
 
-                <p>
-                    &copy; 2026 Your Name. All rights reserved.
-                </p>
+                <div class="contact-intro">
+
+                    <p class="contact-eyebrow">
+                        Get in touch
+                    </p>
+
+                    <h3>
+                        Have something in mind?
+                    </h3>
+
+                    <p>
+                        Whether it's a project, collaboration, freelance
+                        opportunity, or simply a conversation about technology,
+                        feel free to reach out.
+                    </p>
+
+                    <a
+                        href="mailto:your@email.com"
+                        class="contact-email"
+                    >
+                        your@email.com
+                    </a>
+
+                </div>
+
+
+                <form class="contact-form">
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Tell me about your project..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="btn">
+                        Send Message
+                    </button>
+
+                </form>
 
             </div>
 
         </div>
 
-    </footer>
+    </section>
+
+</main>
 
 
-    <script src="js/script.js"></script>
+<!-- Footer -->
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>
+                    Your Name
+                </h3>
+
+                <p>
+                    Building useful digital experiences.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <p>
+                    Social
+                </p>
+
+                <div class="social-links">
+
+                    <a
+                        href="https://github.com/yourusername"
+                        aria-label="GitHub"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/yourusername/"
+                        aria-label="LinkedIn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Your Name. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+```
 
 </body>
 </html>
