@@ -245,7 +245,7 @@ if (scrambleText) {
     const scrambleCycles = 6;
     const letterStagger = 4;
     const cycleSpeed = 4;
-    const frameDuration = 55;
+    const frameDuration = 61;
 
     let frame = 0;
 

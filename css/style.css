@@ -924,7 +924,14 @@ ul {
     }
 
     .hero h1 {
-        font-size: clamp(3rem, 16vw, 5rem);
+        width: 100%;
+        max-width: 100%;
+
+        font-size: clamp(2rem, 10vw, 5rem);
+
+        white-space: nowrap;
+
+        letter-spacing: -0.045em;
     }
 
     .hero-description {
@@ -1026,5 +1033,5 @@ ul {
 
 .scramble-text {
     display: inline-block;
-    min-width: 8ch;
+    max-width: 100%;
 }
