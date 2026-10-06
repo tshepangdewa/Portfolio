@@ -224,4 +224,111 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+   /* ========================================
+   STAGGER TEXT SCRAMBLE
+======================================== */
+
+/* ========================================
+   STAGGER TEXT SCRAMBLE
+======================================== */
+
+const scrambleText = document.querySelector(".scramble-text");
+
+if (scrambleText) {
+
+    const originalText =
+        scrambleText.dataset.text;
+
+    const characters =
+        "{}[]()<>/\\=+-_*&|!?:;.,#@$%^~`";
+
+    const scrambleCycles = 6;
+    const letterStagger = 4;
+    const cycleSpeed = 4;
+    const frameDuration = 55;
+
+    let frame = 0;
+
+    const totalFrames =
+        ((originalText.length - 1) * letterStagger) +
+        (scrambleCycles * cycleSpeed);
+
+    const updateText = () => {
+
+        let output = "";
+
+        for (let i = 0; i < originalText.length; i++) {
+
+            const letterStart =
+                i * letterStagger;
+
+            const letterEnd =
+                letterStart +
+                (scrambleCycles * cycleSpeed);
+
+            if (frame >= letterEnd) {
+
+                output += originalText[i];
+
+            } else if (frame >= letterStart) {
+
+                const cycleFrame =
+                    Math.floor(
+                        (frame - letterStart) /
+                        cycleSpeed
+                    );
+
+                if (cycleFrame >= scrambleCycles) {
+
+                    output += originalText[i];
+
+                } else {
+
+                    output +=
+                        characters[
+                            Math.floor(
+                                Math.random() *
+                                characters.length
+                            )
+                        ];
+
+                }
+
+            } else {
+
+                output +=
+                    characters[
+                        Math.floor(
+                            Math.random() *
+                            characters.length
+                        )
+                    ];
+
+            }
+
+        }
+
+        scrambleText.textContent = output;
+
+        frame++;
+
+        if (frame <= totalFrames) {
+
+            setTimeout(
+                updateText,
+                frameDuration
+            );
+
+        } else {
+
+            scrambleText.textContent =
+                originalText;
+
+        }
+
+    };
+
+    updateText();
+
+}
 });

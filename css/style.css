@@ -1018,3 +1018,13 @@ ul {
     }
 
 }
+
+
+/* ========================================
+   TEXT SCRAMBLE EFFECT
+======================================== */
+
+.scramble-text {
+    display: inline-block;
+    min-width: 8ch;
+}
