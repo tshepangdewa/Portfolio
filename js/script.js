@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ======================================== */
 
     const menuButton = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".nav");
+    const nav = document.querySelector(".nav-links");
 
     if (menuButton && nav) {
 
@@ -14,7 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const isOpen = nav.classList.toggle("active");
 
             menuButton.classList.toggle("active", isOpen);
-            menuButton.setAttribute("aria-expanded", isOpen);
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
 
         });
 
@@ -28,8 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
             link.addEventListener("click", () => {
 
                 nav.classList.remove("active");
+
                 menuButton.classList.remove("active");
-                menuButton.setAttribute("aria-expanded", "false");
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
             });
 
@@ -41,7 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document.addEventListener("click", (event) => {
 
             const clickedInsideNav = nav.contains(event.target);
-            const clickedMenuButton = menuButton.contains(event.target);
+
+            const clickedMenuButton =
+                menuButton.contains(event.target);
 
             if (
                 !clickedInsideNav &&
@@ -50,8 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
             ) {
 
                 nav.classList.remove("active");
+
                 menuButton.classList.remove("active");
-                menuButton.setAttribute("aria-expanded", "false");
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
             }
 
@@ -64,23 +80,132 @@ document.addEventListener("DOMContentLoaded", () => {
        HEADER ON SCROLL
     ======================================== */
 
-    const header = document.querySelector(".header");
+    const header = document.querySelector(".site-header");
 
     if (header) {
 
         const updateHeader = () => {
 
             if (window.scrollY > 30) {
+
                 header.classList.add("scrolled");
+
             } else {
+
                 header.classList.remove("scrolled");
+
             }
 
         };
 
         updateHeader();
 
-        window.addEventListener("scroll", updateHeader);
+        window.addEventListener(
+            "scroll",
+            updateHeader,
+            { passive: true }
+        );
+
+    }
+
+
+    /* ========================================
+       CONTACT FORM
+    ======================================== */
+
+    const contactForm = document.querySelector("#contact-form");
+
+    const formStatus = document.querySelector("#form-status");
+
+    if (contactForm) {
+
+        contactForm.addEventListener("submit", (event) => {
+
+            event.preventDefault();
+
+
+            const name =
+                document.querySelector("#name").value.trim();
+
+            const email =
+                document.querySelector("#email").value.trim();
+
+            const message =
+                document.querySelector("#message").value.trim();
+
+
+            /* Validate fields */
+
+            if (!name || !email || !message) {
+
+                if (formStatus) {
+
+                    formStatus.textContent =
+                        "Please complete all fields.";
+
+                }
+
+                return;
+
+            }
+
+
+            /* Validate email */
+
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email)) {
+
+                if (formStatus) {
+
+                    formStatus.textContent =
+                        "Please enter a valid email address.";
+
+                }
+
+                return;
+
+            }
+
+
+            /*
+             * Create the email contents.
+             * Change this address if your real
+             * portfolio email is different.
+             */
+
+            const recipient =
+                "tshepangdewa@email.com";
+
+            const subject =
+                `Portfolio Contact from ${name}`;
+
+            const body =
+                `Name: ${name}\n` +
+                `Email: ${email}\n\n` +
+                `Message:\n${message}`;
+
+
+            const mailtoURL =
+                `mailto:${recipient}` +
+                `?subject=${encodeURIComponent(subject)}` +
+                `&body=${encodeURIComponent(body)}`;
+
+
+            /* Open the user's email client */
+
+            window.location.href = mailtoURL;
+
+
+            if (formStatus) {
+
+                formStatus.textContent =
+                    "Opening your email client...";
+
+            }
+
+        });
 
     }
 
@@ -89,10 +214,14 @@ document.addEventListener("DOMContentLoaded", () => {
        CURRENT YEAR
     ======================================== */
 
-    const yearElement = document.querySelector("#current-year");
+    const yearElement =
+        document.querySelector("#current-year");
 
     if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
+
+        yearElement.textContent =
+            new Date().getFullYear();
+
     }
 
 });

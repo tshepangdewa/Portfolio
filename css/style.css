@@ -427,41 +427,43 @@ ul {
     gap: 120px;
 }
 
+
+/* Project Card */
+
 .project-card {
     display: grid;
+
     grid-template-columns: 1.15fr 1fr;
+
     gap: 80px;
 
     align-items: center;
 }
 
-.project-card:nth-child(even) {
-    grid-template-columns: 1fr 1.15fr;
-}
 
-.project-card:nth-child(even) .project-image {
-    order: 2;
-}
-
-.project-card:nth-child(even) .project-content {
-    order: 1;
-}
-
-
-/* Project Preview */
+/* ========================================
+   PROJECT IMAGE
+======================================== */
 
 .project-image {
     width: 100%;
-    aspect-ratio: 64 / 27;
+
+    aspect-ratio: 32 / 15;
+
     overflow: hidden;
 }
 
 .project-image img {
     display: block;
+
     width: 100%;
     height: 100%;
+
     object-fit: cover;
 }
+
+
+/* Placeholder */
 
 .project-placeholder {
     width: 88%;
@@ -487,7 +489,9 @@ ul {
 }
 
 
-/* Project Content */
+/* ========================================
+   PROJECT CONTENT
+======================================== */
 
 .project-content {
     max-width: 470px;
@@ -525,7 +529,9 @@ ul {
 }
 
 
-/* Technology Tags */
+/* ========================================
+   TECHNOLOGY TAGS
+======================================== */
 
 .project-tech {
     display: flex;
@@ -549,7 +555,9 @@ ul {
 }
 
 
-/* Project Links */
+/* ========================================
+   PROJECT LINKS
+======================================== */
 
 .project-links {
     display: flex;
@@ -595,6 +603,8 @@ ul {
     transform: scaleX(1);
     transform-origin: left;
 }
+
+
 /* ========================================
    CONTACT
 ======================================== */
@@ -672,7 +682,9 @@ ul {
 }
 
 
-/* Contact Form */
+/* ========================================
+   CONTACT FORM
+======================================== */
 
 .contact-form {
     width: 100%;
@@ -748,6 +760,7 @@ ul {
     background-color: #1D3A43;
 }
 
+
 /* ========================================
    FOOTER
 ======================================== */
@@ -815,6 +828,15 @@ ul {
 
 
 /* ========================================
+   HEADER SCROLL
+======================================== */
+
+.site-header.scrolled {
+    background-color: rgba(21, 45, 53, 0.96);
+}
+
+
+/* ========================================
    MOBILE
 ======================================== */
 
@@ -842,7 +864,7 @@ ul {
         left: 16px;
         right: 16px;
 
-        display: none;
+        display: flex;
         flex-direction: column;
         align-items: stretch;
 
@@ -851,15 +873,42 @@ ul {
         background-color: var(--primary-color);
 
         border: 1px solid rgba(255, 255, 255, 0.12);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.2s ease,
+            visibility 0.2s ease,
+            transform 0.2s ease;
     }
 
-    .nav-links.nav-open {
-        display: flex;
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     .nav-links a {
         display: block;
+
         padding: 10px 0;
+    }
+
+
+    /* Animated menu icon */
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
     }
 
 
@@ -913,158 +962,59 @@ ul {
     }
 
 
-/* Projects */
+    /* Projects */
 
-.projects-list {
-    gap: 80px;
-}
+    .projects-list {
+        gap: 80px;
+    }
 
-.project-card,
-.project-card:nth-child(even) {
-    grid-template-columns: 1fr;
-    gap: 35px;
-}
+    .project-card {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
 
-.project-card:nth-child(even) .project-image,
-.project-card:nth-child(even) .project-content {
-    order: initial;
-}
+    .project-content {
+        max-width: none;
+    }
 
-.project-content {
-    max-width: none;
-}
+    .project-content h3 {
+        font-size: 1.45rem;
+    }
 
-.project-content h3 {
-    font-size: 1.45rem;
-}
+    .project-description {
+        font-size: 0.9rem;
+    }
 
-.project-description {
-    font-size: 0.9rem;
-}
+    .project-links {
+        flex-wrap: wrap;
+    }
 
-.project-links {
-    flex-wrap: wrap;
-}
 
-   /* Contact */
+    /* Contact */
 
-.contact-layout {
-    grid-template-columns: 1fr;
-    gap: 45px;
-}
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
 
-.contact-intro {
-    padding-top: 0;
-}
+    .contact-intro {
+        padding-top: 0;
+    }
 
-.contact-intro h3 {
-    font-size: 1.7rem;
-}
+    .contact-intro h3 {
+        font-size: 1.7rem;
+    }
 
-.contact-form {
-    padding: 25px;
-}
+    .contact-form {
+        padding: 25px;
+    }
+
 
     /* Footer */
 
     .footer-content {
         flex-direction: column;
         gap: 30px;
-    }
-}
-
-/* ========================================
-   HEADER SCROLL
-======================================== */
-
-.header.scrolled {
-    background-color: rgba(21, 45, 53, 0.96);
-}
-
-
-/* ========================================
-   MOBILE MENU
-======================================== */
-
-.menu-toggle {
-    display: none;
-    width: 42px;
-    height: 42px;
-    padding: 10px;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    cursor: pointer;
-}
-
-.menu-toggle span {
-    display: block;
-    width: 100%;
-    height: 1px;
-    margin: 5px 0;
-    background-color: var(--white);
-    transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
-}
-
-
-/* Mobile */
-
-@media (max-width: 768px) {
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav {
-        position: absolute;
-        top: calc(100% + 1px);
-        left: 0;
-        right: 0;
-
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-
-        background-color: var(--primary-color);
-
-        border-top: 1px solid rgba(255, 255, 255, 0.12);
-
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-10px);
-
-        transition:
-            opacity 0.2s ease,
-            visibility 0.2s ease,
-            transform 0.2s ease;
-    }
-
-    .nav.active {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
-
-    .nav a {
-        width: 100%;
-        padding: 15px 24px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-
-    /* Animated menu icon */
-
-    .menu-toggle.active span:nth-child(1) {
-        transform: translateY(6px) rotate(45deg);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-        transform: translateY(-6px) rotate(-45deg);
     }
 
 }
