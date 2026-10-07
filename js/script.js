@@ -331,4 +331,61 @@ if (scrambleText) {
     updateText();
 
 }
+
+/* ========================================
+   HERO CURSOR FOLLOWER
+======================================== */
+
+const hero = document.querySelector(".hero");
+const cursorFollower = document.querySelector(".cursor-follower");
+
+if (hero && cursorFollower) {
+    let mouseX = 0;
+    let mouseY = 0;
+
+    let followerX = 0;
+    let followerY = 0;
+
+    let isInsideHero = false;
+
+    hero.addEventListener("mouseenter", (event) => {
+        isInsideHero = true;
+
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+
+        followerX = mouseX;
+        followerY = mouseY;
+
+        cursorFollower.style.left = `${followerX}px`;
+        cursorFollower.style.top = `${followerY}px`;
+
+        hero.classList.add("cursor-active");
+    });
+
+    hero.addEventListener("mousemove", (event) => {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+    });
+
+    hero.addEventListener("mouseleave", () => {
+        isInsideHero = false;
+        hero.classList.remove("cursor-active");
+    });
+
+    const animateFollower = () => {
+        if (isInsideHero) {
+            followerX += (mouseX - followerX) * 0.25;
+            followerY += (mouseY - followerY) * 0.25;
+
+            cursorFollower.style.left = `${followerX}px`;
+            cursorFollower.style.top = `${followerY}px`;
+        }
+
+        requestAnimationFrame(animateFollower);
+    };
+
+    animateFollower();
+}
+
 });

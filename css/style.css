@@ -1048,3 +1048,46 @@ ul {
     display: inline-block;
     max-width: 100%;
 }
+
+
+/* ========================================
+   HERO CURSOR FOLLOWER
+======================================== */
+
+/* ========================================
+   HERO CURSOR FOLLOWER
+======================================== */
+
+.cursor-follower {
+    position: fixed;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color: #F4F7F6;
+
+    pointer-events: none;
+
+    z-index: 10;
+
+    opacity: 0;
+
+    transform: translate(-50%, -50%);
+
+    transition: opacity 0.2s ease;
+}
+
+.hero.cursor-active .cursor-follower {
+    opacity: 1;
+}
+
+
+/* Disable cursor follower on touch devices */
+
+@media (hover: none), (pointer: coarse) {
+    .cursor-follower {
+        display: none;
+    }
+}
